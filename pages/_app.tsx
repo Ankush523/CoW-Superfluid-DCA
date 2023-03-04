@@ -30,7 +30,7 @@ const wagmiClient = createClient({
   provider
 })
 
-const urbanist = Urbanist({weight: ['400','600','700'],subsets: ['latin'] })
+const urbanist = Urbanist({weight: ['400','600','900'],subsets: ['latin'] })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
