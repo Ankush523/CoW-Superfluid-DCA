@@ -10,15 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'urbanist': ['Urbanist', 'sans-serif'],
-      },
       colors: {
+        'white1' : '#FFFFFF',
         'black1' : '#000000',
         'orange1' : '#E8682B',
-        'blue1' : '2D57ED',
-      }
+        'blue1' : '#2D57ED',
+        'grey1' : '#1d2030',
+        'grey2' : '#33374d'
     },
   },
   plugins: [],
+}
 }
