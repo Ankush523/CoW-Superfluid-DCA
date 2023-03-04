@@ -16,7 +16,8 @@ module.exports = {
         'orange1' : '#E8682B',
         'blue1' : '#2D57ED',
         'grey1' : '#1d2030',
-        'grey2' : '#33374d'
+        'grey2' : '#33374d',
+        'silver' : '#71797E',
     },
   },
   plugins: [],

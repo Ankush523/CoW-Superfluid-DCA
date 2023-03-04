@@ -35,7 +35,11 @@ const urbanist = Urbanist({weight: ['400','600','700'],subsets: ['latin'] })
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains} theme={lightTheme({accentColor: '#E8682B',})}>
+      <RainbowKitProvider chains={chains} theme={lightTheme({accentColor: '#000000',
+      accentColorForeground: '#E8682B',
+      borderRadius: 'small',
+      fontStack: 'system',
+      overlayBlur: 'small',})}>
         <main className={urbanist.className}>
           <Component {...pageProps} />
         </main>

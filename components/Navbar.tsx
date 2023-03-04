@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
 
       <div className=''>
-        <ConnectButton/>
+        <ConnectButton accountStatus="avatar"/>
       </div>
     </div>
   )
