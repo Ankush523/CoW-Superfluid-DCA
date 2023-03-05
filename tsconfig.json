@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Homepage.tsx", "components/SelectToken.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Homepage.tsx", "components/SelectToken.jsx"],
   "exclude": ["node_modules"]
 }
