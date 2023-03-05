@@ -76,8 +76,8 @@ function Chart() {
                                     return price[1].toFixed(2);
                                 }
                             ),
-                            borderColor: 'rgb(255, 99, 132)',
-                            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                            borderColor: 'rgb(232, 104, 43)',
+                            backgroundColor: 'rgba(232, 104, 43, 0.5)',
                         },
                     ],
                 });
@@ -110,6 +110,7 @@ function Chart() {
                         setSelected([c]);
                     }}
                     defaultValue="default"
+                    className='bg-grey1 rounded-lg py-[1%] px-[%] mb-[3%] text-xl'
                 >
                     <option value="default">Choose an option</option>
                     {cryptos
