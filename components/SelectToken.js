@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { ethers } from 'ethers'
 import GetSF from "../hooks/GetSF";
 import { useAccount, useSigner } from 'wagmi'
+
 const SelectToken = () => {
 
     const [fromToken, setFromToken] = useState("0x8aE68021f6170E5a766bE613cEA0d75236ECCa9a"); //USDC ERC20 Contract
@@ -16,7 +17,6 @@ const SelectToken = () => {
     const[amount, setAmount] = useState<String>('0')
     const {data:signer} = useSigner()
     const {address} = useAccount()
-
 
     const batch = async () => {
         const sf = await GetSF();
@@ -39,6 +39,8 @@ const SelectToken = () => {
         const res = await batch.exec(signer);
         console.log(res);
     }
+
+    
 
     const updatebatch = async () => {
         const sf = await GetSF();
