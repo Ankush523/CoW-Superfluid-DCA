@@ -4,6 +4,8 @@ import Image from 'next/image'
 import React from 'react'
 import route from '../images/route2.png'
 import arrow from '../images/arrow.png'
+import bulb from '../images/bulb3.png'
+// import {data} from '../components/data'
 const Homepage = () => {
 
     const [fromToken, setFromToken] = useState("0x8aE68021f6170E5a766bE613cEA0d75236ECCa9a"); //USDC ERC20 Contract
@@ -15,7 +17,7 @@ const Homepage = () => {
             <div className='flex flex-col items-center bg-grey1 mr-[10%] rounded-xl mb-[10%]'>
                 <Image src={route} alt="route" className='bg-blue1 h-[50px] w-[50px] p-3 rounded-2xl my-[10%]'/>
                 <label>Route</label>
-                <p className='pb-[15%] text-silver'>BUSD to  ETH</p>
+                <p className='pb-[15%] text-silver'>USDC to ETH</p>
             </div>
             <div className='flex flex-col items-center bg-grey1 mr-[10%] rounded-xl'>
                 <label className='mt-[10%] mb-[5%]'>My Wallet</label>
@@ -26,8 +28,8 @@ const Homepage = () => {
             </div>
         </div>
 
-        <div className='w-[55%] border-r border-r-silver'>
-            <div className='flex flex-col mx-[3%] bg-grey1 rounded-xl p-[2%]'>
+        <div className='w-[50%] border-r border-r-silver'>
+            <div className='flex flex-col mx-[3%] bg-grey1 rounded-2xl p-[2%]'>
                 <label className='bg-orange1 w-[fit-content] px-[3%] py-[1%] rounded-lg text-black1 mb-[4%]'>Invest</label>
 
                 <div className='flex flex-col bg-blue1 rounded-2xl p-[2%]  shadow-2xl'>
@@ -38,7 +40,7 @@ const Homepage = () => {
                         <option value="0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00">DAI</option>
                     </select> 
                     <label className='text-sm mb-[1%]'>Amount : </label>
-                    <input className='bg-blue1 border rounded-lg shadow-xl text-5xl' placeholder='$'/>
+                    <input className='bg-blue1 border rounded-lg shadow-xl text-5xl' />
                 </div>
 
                 <Image src={arrow} alt="arrow" className='w-[50px] mx-[45%]'/>
@@ -56,8 +58,21 @@ const Homepage = () => {
             </div>
         </div>
 
-        <div>
-            <label>Graph</label>
+        <div className='w-[35%]'>
+            <div className='flex flex-col'>
+                <div className='flex flex-col bg-grey1 ml-[5%] px-[2%] py-[25%] mb-[5%] rounded-2xl'>
+                    <label>Graph</label>
+                </div>
+                <div className='flex flex-col bg-grey1 ml-[5%] px-[%] rounded-2xl'>
+                    <div className='flex flex-row'>
+                        <Image src={bulb} alt="bulb" className='w-[80%] my-[18%]'/>
+                        <div className='flex flex-col my-[5%]'>
+                            <label className='text-2xl text-white1 mb-[2%]'>What is DCA?</label>
+                            <p className=''>Dollar-cost averaging is a tool an investor can use to build savings and wealth over a long period while neutralizing the short-term volatility in the market.The purchases occur regardless of the price of assets and at regular intervals. In effect, this strategy removes much of the detailed work of attempting to time the market in order to make purchases of assets at the best prices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   )
