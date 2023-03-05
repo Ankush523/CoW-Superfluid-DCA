@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CryptoSummary from './CryptoSummary';
-import { Crypto } from './Types';
+import  {Crypto}  from './Types';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -100,8 +100,8 @@ function Chart() {
     }, [selected, range]);
     
     return (
-        <>
-            <div className="">
+        <div className='flex flex-col bg-grey1 ml-[3%] px-[2%] py-[3%] mb-[5%] rounded-2xl'>
+            <div>
                 <select
                     onChange={(e) => {
                         const c = cryptos?.find(
@@ -136,7 +136,7 @@ function Chart() {
                     <Line options={options} data={data} />
                 </div>
             ) : null}
-        </>
+        </div>
     );
 }
 
