@@ -5,11 +5,11 @@ import React from 'react'
 import route from '../images/route2.png'
 import arrow from '../images/arrow.png'
 import bulb from '../images/bulb3.png'
-// import {data} from '../components/data'
+import Chart from '@/components/Chart'
 const Homepage = () => {
 
     const [fromToken, setFromToken] = useState("0x8aE68021f6170E5a766bE613cEA0d75236ECCa9a"); //USDC ERC20 Contract
-    const [toToken, setToToken] = useState("0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947"); //
+    const [toToken, setToToken] = useState("0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947"); //ETH ERC20 Contract
 
   return (
     <div className='flex flex-row mx-[3%]'>
@@ -28,7 +28,7 @@ const Homepage = () => {
             </div>
         </div>
 
-        <div className='w-[50%] border-r border-r-silver'>
+        <div className='w-[45%] border-r border-r-silver'>
             <div className='flex flex-col mx-[3%] bg-grey1 rounded-2xl p-[2%]'>
                 <label className='bg-orange1 w-[fit-content] px-[3%] py-[1%] rounded-lg text-black1 mb-[4%]'>Invest</label>
 
@@ -58,18 +58,15 @@ const Homepage = () => {
             </div>
         </div>
 
-        <div className='w-[35%]'>
+        <div className='w-[40%]'>
             <div className='flex flex-col'>
-                <div className='flex flex-col bg-grey1 ml-[5%] px-[2%] py-[25%] mb-[5%] rounded-2xl'>
-                    <label>Graph</label>
+                <div className='flex flex-col bg-grey1 ml-[3%] px-[2%] py-[5%] mb-[5%] rounded-2xl'>
+                    <Chart/>
                 </div>
-                <div className='flex flex-col bg-grey1 ml-[5%] px-[%] rounded-2xl'>
-                    <div className='flex flex-row'>
-                        <Image src={bulb} alt="bulb" className='w-[80%] my-[18%]'/>
-                        <div className='flex flex-col my-[5%]'>
-                            <label className='text-2xl text-white1 mb-[2%]'>What is DCA?</label>
-                            <p className=''>Dollar-cost averaging is a tool an investor can use to build savings and wealth over a long period while neutralizing the short-term volatility in the market.The purchases occur regardless of the price of assets and at regular intervals. In effect, this strategy removes much of the detailed work of attempting to time the market in order to make purchases of assets at the best prices.</p>
-                        </div>
+                <div className='flex flex-col bg-grey1 ml-[3%] px-[%] rounded-2xl'>
+                    <div className='flex flex-col my-[5%] px-[3%]'>
+                        <label className='text-2xl text-white1'>What is DCA?</label>
+                        <p className=''>Dollar-cost averaging is a tool an investor can use to build savings and wealth over a long period while neutralizing the short-term volatility in the market.The purchases occur regardless of the price of assets and at regular intervals. In effect, this strategy removes much of the detailed work of attempting to time the market in order to make purchases of assets at the best prices.</p>
                     </div>
                 </div>
             </div>
