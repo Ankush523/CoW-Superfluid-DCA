@@ -14,16 +14,16 @@ const SelectToken = () => {
     console.log(fromToken)
     console.log(toToken)
 
-    const[amount, setAmount] = useState<String>('0')
+    const[amount, setAmount] = useState('0')
     const {data:signer} = useSigner()
     const {address} = useAccount()
 
     const batch = async () => {
         const sf = await GetSF();
         const supertokenx = await sf.loadSuperToken(fromToken);
-        const supertoken = supertokenx?.underlyingToken;
+        const supertoken = supertokenx.underlyingToken;
         const approve = supertoken.approve({
-          receiver : supertokenx.address || '0x0',
+          receiver : supertokenx.address,
           amount : ethers.utils.parseEther("10000")
         });
         const apv = await approve.exec(signer);
@@ -45,9 +45,9 @@ const SelectToken = () => {
     const updatebatch = async () => {
         const sf = await GetSF();
         const supertokenx = await sf.loadSuperToken(fromToken);
-        const supertoken = supertokenx?.underlyingToken;
+        const supertoken = supertokenx.underlyingToken;
         const approve = supertoken.approve({
-          receiver : supertokenx.address || '0x0',
+          receiver : supertokenx.address,
           amount : ethers.utils.parseEther("10000")
         });
         const apv = await approve.exec(signer);
