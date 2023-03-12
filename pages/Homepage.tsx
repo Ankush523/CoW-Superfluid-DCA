@@ -1,5 +1,5 @@
 import React from 'react'
-import Chart from '@/components/PriceCharts/Chart'
+import CryptoChart from '@/components/CryptoChart'
 import SelectToken from '@/components/SelectToken'
 import DCAInfo from '@/components/DCAInfo'
 import Sidebar from '@/components/Sidebar'
@@ -15,7 +15,7 @@ const Homepage = () => {
 
         <div className='w-[40%]'>
             <div className='flex flex-col'>  
-                <Chart/>            
+                <CryptoChart/>            
                 <DCAInfo/>
             </div>
         </div>
