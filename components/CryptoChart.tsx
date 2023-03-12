@@ -36,8 +36,13 @@ const CryptoChart = () => {
     const fetchCryptoList = async () => {
       const response = await fetch('https://api.coingecko.com/api/v3/coins/list');
       const data = await response.json();
-      const filteredData = data.filter((item: { symbol: string; }) => item.symbol !== 'eur' && item.symbol !== 'usd'); // filter out fiat currencies
-      const formattedData = filteredData.map((item: { name: string; id: string; }) => ({ name: item.name, id: item.id }));
+      const tokenIds = ['bitcoin', 'ethereum', 'matic-network', 'usd-coin'];
+      const filteredData = data.filter((item : any ) => tokenIds.includes(item.id));
+      const formattedData = filteredData.map((item : any) => ({
+        name: item.name,
+        symbol: item.symbol,
+        id: item.id,
+      }));
       setCryptoList(formattedData);
     };
     fetchCryptoList();
