@@ -32,7 +32,7 @@ const SelectToken = () => {
         const stream = supertokenx.createFlow({
           sender : "0xF7bdD875Ca5449B9B98E756B1157264d325BA359",
           receiver: "0x7E9BC94e21BEb85DaFAF2Afd5530DE876951124D",
-          flowRate: "10000"
+          flowRate: "100000"
         }
       );
         const batch = sf.batchCall([op, stream]);
